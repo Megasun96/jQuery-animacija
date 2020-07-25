@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<title>jQuery animacija</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<div class="header">
+  <h1>ANIMACIJA</h1></div>
+
+<p align="center">
+<button id="Button" style="color: #55FF00; font-family: 'Poppins', cursive; font-size: 30px; font-family: 'Poppins', cursive; font-size: 30px; padding: 15px; border: 1px; outline: none; border-radius: 4px; cursor: pointer; width: 120px;height: 80px; background-color: #0026FF; margin-left: auto; margin-right: auto; display: block; margin-top: 0%; margin-bottom: 0%">START</button>
+</p>  
+</div>
+
+    <div class="container" id="container1">
+      <div class="box" id="box1"></div>
+      <div class="box" id="box2"></div>
+      <div class="box" id="box3"></div>
+	  <div class="box" id="box4"></div>
+    </div>
+
+    <div class="container" id="container4">
+      <div class="rectangle" id="rect"></div>
+    </div>
+	
+    <script src="scripts/clickEvents.js" type="text/javascript"></script>
+    <script type="text/javascript">	
+
+	var button = $('button');
+    var box = $(".box");
+
+    button.click(function(){
+       box.css("transition","15s")
+       box.css("margin-left","1190px")
+
+    setTimeout(function(){
+      box.css("margin-left","0px")
+    },8000)
+    })
+
+     $(".box:eq(0)").click(function(){
+     $(".box:eq(0)").css("transition","1s")
+     $(".box:eq(0)").css("width","250px")
+     })
+
+     $(".box:eq(0)").dblclick(function(){
+     $(".box:eq(0)").css("transition","1s")
+     $(".box:eq(0)").css("width","60px")
+     })
+
+     $(".box:eq(1)").mouseenter(function(){
+     $(".box:eq(1)").css("transition","1s")
+     $(".box:eq(1)").css("width","150px")
+     $(".box:eq(1)").css("height","150px")
+     $(".box:eq(1)").css("background-color","#FF80FE")
+     })
+
+     $(".box:eq(1)").mouseleave(function(){
+     $(".box:eq(1)").css("transition","1s")
+     $(".box:eq(1)").css("width","60px")
+     $(".box:eq(1)").css("height","60px")
+     $(".box:eq(1)").css("background-color","#EC0909")
+     })
+
+     $(".box:eq(2)").mouseenter(function(){
+     $(".box:eq(2)").css("background-color","#16CDA8")
+     })
+
+     $(".box:eq(2)").mouseleave(function(){
+     $(".box:eq(2)").css("background-color","#D58D8D")
+     })
+
+     $(".box:eq(3)").click(function(){
+     $(".box:eq(3)").css("transition","1s")
+     $(".box:eq(3)").css("width","60px")
+     $(".box:eq(3)").css("height","60px")
+     $(".box:eq(3)").css("border-radius","50%")
+     $(".box:eq(3)").css("background-color","#FAA537")
+     })
+
+     $(".box:eq(3)").dblclick(function(){
+     $(".box:eq(3)").css("transition","1s")
+     $(".box:eq(3)").css("width","60px")
+     $(".box:eq(3)").css("height","60px")
+     $(".box:eq(3)").css("border-radius","0%")
+     $(".box:eq(3)").css("background-color","#FFF40E")
+     })
+</script>
+</body>
+</html>
